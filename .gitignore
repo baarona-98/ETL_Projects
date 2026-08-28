@@ -1,0 +1,21 @@
+# Fichiers de données
+*.csv
+*.db
+*.log
+
+# Dossiers de données
+data/
+
+# Clés API et environnement
+.env
+
+# Dossiers Python
+venv/
+__pycache__/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Système
+.DS_Store
+Thumbs.db
