@@ -100,4 +100,4 @@ Arona Ba
 GitHub : https://github.com/baarona-98
 LinkedIn : https://linkedin.com/in/arona-ba-a440101b1
 
-Projets realises dans le cadre de la certification IBM Data Engineering.
+Projets réalises dans le cadre de la certification IBM Data Engineering.
