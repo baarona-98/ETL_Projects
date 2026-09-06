@@ -9,6 +9,7 @@ Extraction des 10 plus grandes banques du monde depuis Wikipedia via web scrapin
 Transformation et enrichissement avec un fichier CSV de taux de change (EUR, GBP, INR).
 Chargement en CSV et SQLite.
 
+
 ## Technologies
 
 - Python 3.8+
@@ -22,13 +23,22 @@ Chargement en CSV et SQLite.
 - BeautifulSoup4
 - Pandas
 
-## Installation
-
-pip install -r requirements.txt
 
 ## Utilisation
 
-jupyter notebook Banks_ETL.ipynb
+# Rendre le fichier run_etl.sh exécutable
+chmod +x run_etl.sh
+
+# Lancer le pipeline
+./run_etl.sh
+
+Le script `run_etl.sh` gère automatiquement :
+
+- La création et l'activation de l'environnement virtuel
+- L'installation des dépendances
+- Le téléchargement du fichier CSV des taux de change
+- L'exécution du pipeline
+- La désactivation de l'environnement
 
 ## Fichiers générés
 
@@ -39,13 +49,15 @@ jupyter notebook Banks_ETL.ipynb
 ## Structure du projet
 
 Banks_ETL/
-├── Banks_ETL.ipynb           # Notebook principal
-├── README.md
-├── requirements.txt
-├── exchange_rate.csv         # Taux de change (téléchargé)
-├── largest_banks_data.csv    # Résultat CSV (généré)
-├── banks.db                  # Base SQLite (générée)
-└── code_log.txt              # Journal (généré)
+├── Banks_ETL.py        # Script ETL principal
+├── run_etl.sh          # Script Shell (lancement)
+├── README.md           # Documentation
+├── requirements.txt    # Dépendances Python
+├── venv/               # Environnement virtuel
+├── exchange_rate.csv   # Taux de change (téléchargé)
+├── largest_banks_data.csv  # Résultat CSV (généré)
+├── banks.db            # Base SQLite (générée)
+└── code_log.txt        # Journal (généré)
 
 ## Source des données
 

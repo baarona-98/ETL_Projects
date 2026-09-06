@@ -1,7 +1,6 @@
 # Fichiers de données
 *.csv
 *.db
-*.log
 
 # Dossiers de données
 data/
@@ -13,9 +12,12 @@ data/
 venv/
 __pycache__/
 
-# Notebooks
-.ipynb_checkpoints/
-
 # Système
 .DS_Store
 Thumbs.db
+
+# Fichier de logs
+*.log
+
+# Fichiers des dépendances
+*.txt

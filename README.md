@@ -80,17 +80,25 @@ L'objectif est de démontrer ma capacité à :
 
 ## 🚀 Comment exécuter les projets
 
-Chaque projet est un notebook Jupyter :
-
-```bash
 # 1. Naviguer dans un projet
 cd Banks_ETL
 
-# 2. Installer les dépendances
-pip install -r requirements.txt
+# 2. Rendre le script .sh exécutable
+chmod +x run_etl.sh
 
-# 3. Lancer le notebook
-jupyter notebook Banks_ETL.ipynb
+# 3. Lancer le pipeline
+./run_etl.sh
+
+## 🔧 Configuration requise
+
+Avant d'exécuter les projets, assure-toi d'avoir Python 3.8+ installé.
+
+### Installation de venv (à faire avant de lancer les scripts .sh)
+
+```bash
+sudo apt update
+# Remplacer "x" par ta version de Python (ex: 3.10, 3.11, 3.12)
+sudo apt install python3.x-venv -y
 
 
 ## Auteur
@@ -101,3 +109,4 @@ GitHub : https://github.com/baarona-98
 LinkedIn : https://linkedin.com/in/arona-ba-a440101b1
 
 Projets réalisés dans le cadre de la certification IBM Data Engineering.
+20ac5d9 (Mise à jour : 4 projets ETL avec scripts .py et run_etl.sh)

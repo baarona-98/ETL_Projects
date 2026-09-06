@@ -19,13 +19,22 @@ Transformations (conversion d'unités impériales en métriques) et chargement e
 - Pandas
 - Requests
 
-## Installation
-
-pip install -r requirements.txt
-
 ## Utilisation
 
-jupyter notebook Multi_Sources_ETL.ipynb
+```bash
+# Rendre le fichier run_etl.sh exécutable
+chmod +x run_etl.sh
+
+# Lancer le pipeline
+./run_etl.sh
+
+Le script `run_etl.sh` gère automatiquement :
+
+- La création et l'activation de l'environnement virtuel
+- L'installation des dépendances
+- Le téléchargement et l'extraction des données sources
+- L'exécution du pipeline
+- La désactivation de l'environnement
 
 ## Fichiers générés
 
@@ -36,13 +45,15 @@ jupyter notebook Multi_Sources_ETL.ipynb
 ## Structure du projet
 
 Multi_Sources_ETL/
-├── Multi_Sources_ETL.ipynb   # Notebook principal
-├── README.md
-├── requirements.txt
-├── data/                     # Données sources (généré)
-├── transformed_data.csv      # Résultat CSV (généré)
-├── cleaned_data.db           # Base SQLite (générée)
-└── log_file.txt              # Journal (généré)
+├── M_S_ETL.py             # Script ETL principal
+├── run_etl.sh             # Script Shell (lancement)
+├── README.md              # Documentation
+├── requirements.txt       # Dépendances Python
+├── venv/                  # Environnement virtuel (créé automatiquement)
+├── data/                  # Données sources (téléchargées automatiquement)
+├── transformed_data.csv   # Résultat CSV (généré)
+├── cleaned_data.db        # Base SQLite (générée)
+└── log_file.txt           # Journal (généré)
 
 ## Exemple de résultat
 

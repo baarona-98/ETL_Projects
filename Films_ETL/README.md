@@ -19,15 +19,6 @@ api_key=votre_cle_api_rapidapi_ici
 Récupération des 1000 meilleurs films depuis l'API IMDb (via RapidAPI).
 Transformations (nettoyage des données) et chargement en CSV et SQLite.
 
-Données extraites par film :
-- Titre
-- Année de sortie
-- Durée (minutes)
-- Genre
-- Note IMDb
-- Synopsis
-- Nombre de votes
-- Recettes
 
 ## Technologies
 
@@ -43,14 +34,20 @@ Données extraites par film :
 - Pandas
 - python-dotenv
 
-## Installation
+# Rendre le fichier run_etl.sh exécutable
+chmod +x run_etl.sh
 
-pip install -r requirements.txt
-cp .env.example .env
+# Lancer le pipeline
+./run_etl.sh
 
-## Utilisation
+Le script `run_etl.sh` gère automatiquement :
 
-jupyter notebook Films_ETL.ipynb
+- La vérification de la présence du fichier `.env`
+- La création et l'activation de l'environnement virtuel
+- L'installation des dépendances
+- L'exécution du pipeline
+- La désactivation de l'environnement
+
 
 ## Fichiers générés
 
@@ -61,14 +58,16 @@ jupyter notebook Films_ETL.ipynb
 ## Structure du projet
 
 Films_ETL/
-├── Films_ETL.ipynb           # Notebook principal
-├── README.md
-├── requirements.txt
-├── .env                       # Variables d'environnement (à créer)
-├── .env.example               # Exemple de configuration
-├── films.csv                  # Résultat CSV (généré)
-├── films.db                   # Base SQLite (générée)
-└── code_log.txt               # Journal (généré)
+├── Films_ETL.py          # Script ETL principal
+├── run_etl.sh            # Script Shell (lancement)
+├── README.md             # Documentation
+├── requirements.txt      # Dépendances Python
+├── .env                  # Variables d'environnement (à créer)
+├── .env.example          # Exemple de configuration
+├── venv/                 # Environnement virtuel (créé automatiquement)
+├── films.csv             # Résultat CSV (généré)
+├── films.db              # Base SQLite (générée)
+└── code_log.txt          # Journal (généré)
 
 ## Source des données
 

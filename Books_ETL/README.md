@@ -9,12 +9,6 @@ Récupération de 1000 livres (50 pages × 20 livres) depuis books.toscrape.com 
 Transformation et enrichissement avec un fichier CSV de taux de change (EUR, USD, INR).
 Chargement en CSV et SQLite.
 
-Données extraites par livre :
-- Titre
-- Prix en GBP
-- Disponibilité
-- Note (1 à 5 étoiles)
-
 ## Technologies
 
 - Python 3.8+
@@ -28,13 +22,23 @@ Données extraites par livre :
 - BeautifulSoup4
 - Pandas
 
-## Installation
-
-pip install -r requirements.txt
-
 ## Utilisation
 
-jupyter notebook Books_ETL.ipynb
+```bash
+# Rendre le fichier run_etl.sh exécutable
+chmod +x run_etl.sh
+
+# Lancer le pipeline
+./run_etl.sh
+
+
+Le script `run_etl.sh` gère automatiquement :
+
+- La création et l'activation de l'environnement virtuel
+- L'installation des dépendances
+- L'exécution du pipeline
+- La désactivation de l'environnement
+
 
 ## Fichiers générés
 
@@ -45,13 +49,15 @@ jupyter notebook Books_ETL.ipynb
 ## Structure du projet
 
 Books_ETL/
-├── Books_ETL.ipynb           # Notebook principal
-├── README.md
-├── requirements.txt
-├── exchange_rate.csv         # Taux de change
-├── books.csv                 # Résultat CSV (généré)
-├── books.db                  # Base SQLite (générée)
-└── code_log.txt              # Journal (généré)
+├── Books_ETL.py          # Script ETL principal
+├── run_etl.sh            # Script Shell (lancement)
+├── README.md             # Documentation
+├── requirements.txt      # Dépendances Python
+├── venv/                 # Environnement virtuel (créé automatiquement)
+├── exchange_rate.csv     # Taux de change (Déjà téléchargé)
+├── books.csv             # Résultat CSV (généré)
+├── books.db              # Base SQLite (générée)
+└── code_log.txt          # Journal (généré)
 
 ## Source des données
 
