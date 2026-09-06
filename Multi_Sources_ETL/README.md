@@ -21,7 +21,6 @@ Transformations (conversion d'unités impériales en métriques) et chargement e
 
 ## Utilisation
 
-```bash
 # Rendre le fichier run_etl.sh exécutable
 chmod +x run_etl.sh
 

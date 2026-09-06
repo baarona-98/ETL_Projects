@@ -95,7 +95,6 @@ Avant d'exécuter les projets, assure-toi d'avoir Python 3.8+ installé.
 
 ### Installation de venv (à faire avant de lancer les scripts .sh)
 
-```bash
 sudo apt update
 # Remplacer "x" par ta version de Python (ex: 3.10, 3.11, 3.12)
 sudo apt install python3.x-venv -y

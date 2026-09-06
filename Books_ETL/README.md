@@ -24,7 +24,6 @@ Chargement en CSV et SQLite.
 
 ## Utilisation
 
-```bash
 # Rendre le fichier run_etl.sh exécutable
 chmod +x run_etl.sh
 
