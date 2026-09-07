@@ -108,4 +108,3 @@ GitHub : https://github.com/baarona-98
 LinkedIn : https://linkedin.com/in/arona-ba-a440101b1
 
 Projets réalisés dans le cadre de la certification IBM Data Engineering.
-20ac5d9 (Mise à jour : 4 projets ETL avec scripts .py et run_etl.sh)
